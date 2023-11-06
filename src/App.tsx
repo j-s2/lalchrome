@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
+import config from "../config";
 
 function App() {
-  //npm run build after making changes
-  //fetch data from api
-
+  const API_KEY: string = config.MY_KEY;
   //define types for data being read in
   interface Team {
     id: number;
@@ -78,7 +77,7 @@ function App() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "bfc7b63475mshe172ddc89e7a5c8p1576dajsn6c8388b25175",
+        "X-RapidAPI-Key": `${API_KEY}`,
         "X-RapidAPI-Host": "api-nba-v1.p.rapidapi.com",
       },
     };
