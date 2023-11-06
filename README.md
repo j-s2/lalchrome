@@ -6,4 +6,9 @@ The project was made using React with Typescript.
 
 ## Uses API-NBA to get live stats
 
+The following message displays if there is no Lakers game on:
+
 ![Alt text](/1.png?raw=true "No Games")
+
+The following displays if there is a Lakers game on:
+
