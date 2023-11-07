@@ -12,3 +12,4 @@ The following message displays if there is no Lakers game on:
 
 The following displays if there is a Lakers game on:
 
+![Alt text](/2.png?raw=true "Games")
