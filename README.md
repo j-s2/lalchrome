@@ -1,4 +1,4 @@
-### Lakers Chrome Extension Project
+# Lakers Chrome Extension Project
 
 This Chrome extension is designed for Lakers fans to stay updated with the latest scores of their games in real-time. Developed using React and TypeScript, this project leverages the power of API-NBA to fetch live stats, ensuring fans never miss out on the action.
 
