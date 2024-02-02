@@ -1,15 +1,20 @@
-# Lakers Chrome Extension Project
+### Lakers Chrome Extension Project
 
-This project is a chrome extension that displays the current score of the Lakers game if there is one.
+This Chrome extension is designed for Lakers fans to stay updated with the latest scores of their games in real-time. Developed using React and TypeScript, this project leverages the power of API-NBA to fetch live stats, ensuring fans never miss out on the action.
 
-The project was made using React with Typescript. 
+## How It Works
 
-## Uses API-NBA to get live stats
+The extension queries API-NBA for the latest Lakers game stats when clicked. 
 
-The following message displays if there is no Lakers game on:
+**No Game Scenario**
 
-![Alt text](/1.png?raw=true "No Games")
+When there is no game, it shows the following default message when clicked:
 
-The following displays if there is a Lakers game on:
+![Alt text](src/imgs/No%20Game.png?raw=true "No Games")
 
-![Alt text](/2.png?raw=true "Games")
+**Game On Scenario**
+
+When there is currently a Lakers game going on, the extension showcases the teams playing, the quarter, how much time is left, and the team scores. 
+
+![Alt text](src/imgs/Game%20is%20On.png?raw=true "Games")
+
