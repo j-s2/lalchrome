@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import config from "../config";
+import "./index.css";
 
 function App() {
   const API_KEY: string = config.MY_KEY;
   //define types for data being read in
+
   interface Team {
     id: number;
     name: string;
@@ -111,16 +113,16 @@ function App() {
 
   useEffect(() => {
     getLiveStats();
-  }, []);
+  });
 
   return (
     <>
       {game ? (
-        <div>
-          <h2>
+        <div className="game-is-on">
+          <div className="game-title">
             {game.teams.visitors.nickname} vs. {game.teams.home.nickname}
-          </h2>
-          <h3>
+          </div>
+          <div className="game-status">
             {game.periods.current === 4 &&
             game.status.clock === "0:00" &&
             game.scores.home.points != game.scores.visitors.points
@@ -132,26 +134,33 @@ function App() {
               : game.status.halftime
               ? "HALFTIME"
               : `QT ${game.periods.current} , ${game.status.clock} left`}
-          </h3>
-          <div>
-            <img
-              src={game.teams.visitors.logo}
-              style={{ width: "40px", height: "20px" }}
-            />
-            {game.teams.visitors.code} {game.scores.visitors.points}
           </div>
-          <div>
-            <img
-              src={game.teams.home.logo}
-              style={{ width: "40px", height: "20px" }}
-            />
-            {game.teams.home.code} {game.scores.home.points}
+          <div className="game-teams">
+            <div className="game-teams-info">
+              <img
+                src={game.teams.visitors.logo}
+                style={{ width: "40px", height: "20px" }}
+              />
+              <div>
+                {" "}
+                {game.teams.visitors.code} {game.scores.visitors.points}{" "}
+              </div>
+            </div>
+            <div className="game-teams-info">
+              <img
+                src={game.teams.home.logo}
+                style={{ width: "40px", height: "20px" }}
+              />
+              <div>
+                {" "}
+                {game.teams.home.code} {game.scores.home.points}{" "}
+              </div>
+            </div>
           </div>
         </div>
       ) : (
-        <div>
-          No lakers games right now, don't worry though it might be a good
-          thing.
+        <div className="no-games">
+          <p>No Lakers game right now.</p>
         </div>
       )}
     </>
